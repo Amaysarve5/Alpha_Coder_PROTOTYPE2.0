@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Carbon Footprint Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Your Dashboard</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="log.html">Log Activity</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="insights.html">Insights</a>
+      <a href="aboutus.html">About Us</a>
+    </nav>
+  </header>
+
+  <main class="dashboard-container">
+
+    <!-- Summary Cards -->
+    <section class="summary-cards">
+      <div class="card">
+        <h2>Total Emissions</h2>
+        <p>23.5 kg CO₂</p>
+      </div>
+      <div class="card">
+        <h2>Most Impactful Activity</h2>
+        <p>Car Travel</p>
+      </div>
+      <div class="card">
+        <h2>Average Daily Footprint</h2>
+        <p>3.2 kg CO₂</p>
+      </div>
+    </section>
+
+    <!-- Chart Section -->
+    <section class="chart-section">
+      <h2>Weekly Emission Overview</h2>
+      <canvas id="emissionChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips-section">
+      <h2>Tips to Reduce Your Carbon Footprint</h2>
+      <ul>
+        <li>Switch to public transportation or cycle for short distances.</li>
+        <li>Reduce meat consumption and switch to plant-based meals.</li>
+        <li>Unplug electronics when not in use.</li>
+        <li>Buy local and sustainable products.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <script>
+    // Chart.js sample data
+    const ctx = document.getElementById('emissionChart').getContext('2d');
+    const emissionChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets: [{
+          label: 'CO₂ Emissions (kg)',
+          data: [2.5, 3.0, 2.8, 3.5, 4.0, 3.3, 4.4],
+          backgroundColor: '#00b894',
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+<script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="JrwFkt9Bcm3SlZuaIBRd8";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Carbon Tracker</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f2f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h2 {
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.login-form p {
+  color: #777;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+label {
+  margin: 0.5rem 0 0.25rem;
+  display: block;
+  color: #444;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2a9d8f;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21867a;
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-text a {
+  color: #2a9d8f;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Welcome Back</h2>
+      <p>Please login to continue</p>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" required />
+
+      <button type="submit">Login</button>
+
+      <div class="footer-text">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

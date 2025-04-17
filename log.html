@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carbon Activity Logger</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .form-container {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      margin: 2rem auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, select, button {
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    button {
+      background-color: #388e3c;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2a9d8f;
+    }
+
+    header {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body style="background-image: url(image/WhatsApp\ Image\ 2025-04-16\ at\ 16.50.02_d9f5c978.jpg);">
+  <header>
+    <h1>Welcome to Carbon Footprint Tracker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="log.html">Log Activity</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="insights.html">Insights</a>
+      <a href="aboutus.html">About Us</a>
+    </nav>
+  </header>
+
+  <div class="form-container" >
+    <h1>Log Your Carbon Activity</h1>
+    <form id="activityForm">
+      <h3>Email</h3>
+      <input type="email" id="email" placeholder="user_email" required />
+
+      <h3>Select Day</h3>
+      <select id="day_type" required>
+        <option value="">Select Day Type</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+        <option value="Sunday">Sunday</option>
+      </select>
+
+      <h3>Select Activity</h3>
+      <select id="activity_type" required>
+        <option value="">Select Activity Type</option>
+        <option value="Travel">Travel</option>
+        <option value="Food">Food</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Electricity">Electricity</option>
+      </select>
+
+      <h3>Activity details</h3>
+      <input type="text" id="activity_detail" placeholder="e.g. Car - 10km or chicken - 1kg" required />
+
+
+      <h3>Carbon Output</h3>
+      <input type="text" id="carbon_output" placeholder="Carbon Output (e.g. 500 grams CO₂)" readonly />
+
+
+
+      <button type="submit">Submit</button>
+    </form>
+    <p id="result"></p>
+  </div>
+
+  <script type="module" src="activity.js"></script>
+  <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="JrwFkt9Bcm3SlZuaIBRd8";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+    
+</body>
+</html>

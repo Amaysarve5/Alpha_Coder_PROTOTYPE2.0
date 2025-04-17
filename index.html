@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img class="logo" width="50px"  src="https://media.istockphoto.com/vectors/reduce-your-carbon-footprint-icon-vector-id1387271093?k=20&m=1387271093&s=612x612&w=0&h=U055xjFNLEBmYia2v0slvKpefR6Ol7fGPLN6XLiUOrg=" alt="logo">
+    <h1>Welcome to Carbon Footprint Tracker</h1>
+    <div class="auth-buttons">
+        <button onclick="window.location.href='login.html'">Login</button>
+        <button onclick="window.location.href='signup.html'">Sign Up</button>
+      </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="log.html">Activity</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="insights.html">Insights</a>
+      <a href="aboutus.html">About Us</a>
+    </nav>
+  </header>
+  
+
+  <main>
+    <section class="intro" style="background-image: url(image/nature2.jpg);">
+      <h2>Track Your Environmental Impact</h2>
+      <p>Calculate your carbon footprint based on your daily activities like travel, food consumption, shopping, and electricity usage.</p>
+      <button><a href="log.html" class="button">Start Logging Activities</a></button>
+    </section>
+
+    <section class="features-section">
+      <h2 class="section-title">Features Overview</h2>
+      <p class="section-subtitle">
+        Discover the powerful tools and insights our Carbon Footprint Tracker offers to help you reduce your environmental impact.
+      </p>
+
+      <div class="feature-block">
+        <div class="feature-text">
+          <h3>Real-Time Tracking</h3>
+          <p>
+            Monitor your daily carbon emissions from activities like transportation and energy usage in real-time.
+          </p>
+          <div class="buttons">
+            <a href="log.html" class="btn-primary">Try now</a>
+            <a href="#" class="btn-secondary" id="learnMoreBtn">Learn more</a>
+          </div>
+
+          <!-- Hidden section -->
+          <div id="learn-more-details" class="hidden-details">
+            <h4>What is Real-Time Tracking?</h4>
+            <p>
+              Real-time tracking helps you monitor your carbon emissions instantly as you input data about your daily life. 
+              It collects insights from categories like travel, food, and electricity usage to offer an accurate footprint estimate.
+            </p>
+            <ul>
+              <li>Track emissions from public and private transport</li>
+              <li>Log energy use and get impact reports</li>
+              <li>Visualize trends in your footprint over time</li>
+            </ul>
+          </div>
+        </div>
+        <div class="feature-image">
+          <img height="50%" width="450px" src="image/footprint.png" alt="Real-Time Tracking Image" />
+        </div>
+      </div>
+
+      <div class="feature-block reverse">
+        <div class="feature-image">
+          <img src="image/Insights.jpeg" alt="Personalized Insights Image" />
+        </div>
+        <div class="feature-text">
+          <h3>Personalized Insights</h3>
+          <p>
+            Receive tailored recommendations for reducing your emissions based on your lifestyle and activity data.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-section about">
+        <h3>Carbon Footprint Tracker</h3>
+        <p>Helping you track and reduce your carbon footprint through real-time data and personalized insights. Join the movement for a greener planet.</p>
+      </div>
+  
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="log.html">Log Activity</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@carbontracker.com</p>
+        <p>Phone: +91-9876543210</p>
+        <p>Location: Amravati, India</p>
+      </div>
+  
+      <div class="footer-section social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i><img width="20px"  src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt=""></a>
+          <a href="#"><i class="fab fa-twitter"></i><img width="20px" src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt=""></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i><img width="20px" src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt=""></a>
+          <a href="#"><i class="fab fa-instagram"></i><img width="20px" src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt=""></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Carbon Footprint Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+  <!-- JavaScript for Learn More functionality -->
+  <script>
+    const learnMoreBtn = document.getElementById('learnMoreBtn');
+    const detailsSection = document.getElementById('learn-more-details');
+
+    learnMoreBtn.addEventListener('click', function(event) {
+      event.preventDefault();
+      if (detailsSection.style.display === 'block') {
+        detailsSection.style.display = 'none';
+      } else {
+        detailsSection.style.display = 'block';
+      }
+    });
+  </script>
+
+<script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="JrwFkt9Bcm3SlZuaIBRd8";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>
